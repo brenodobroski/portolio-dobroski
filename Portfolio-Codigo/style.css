@@ -1,0 +1,882 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #222324;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.home {
+  background: rgb(0, 76, 125);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 76, 125, 1) 0%,
+    rgba(0, 212, 255, 0) 100%
+  );
+
+  width: 100%;
+  height: 100vh;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    40deg,
+    rgba(0, 147, 233, 1) 0%,
+    rgba(128, 208, 199, 1) 100%
+  );
+
+  border-radius: 16px;
+}
+
+/* -------- HEADER -------- */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+}
+
+.navbar-right {
+  margin-top: 79px;
+  margin-left: 163px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right img {
+  border-radius: 50%;
+  width: 99px;
+  height: 99px;
+  object-fit: cover;
+  object-position: 0 -35px;
+}
+
+.navbar-right a {
+  text-decoration: none;
+  color: #f0f3f5;
+  font-family: "Mukta", sans-serif;
+  font-size: 36px;
+  margin-left: 31px;
+}
+
+.navbar-left {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f0f3f5;
+  border-radius: 16px;
+  margin-top: 62px;
+  margin-right: 12px;
+  margin-left: 100px;
+  width: 974px;
+  height: 71px;
+}
+
+.navbar-left a {
+  text-decoration: none;
+  color: #222324;
+  font-family: "Mukta", sans-serif;
+  font-size: 24px;
+}
+
+.Home-text {
+  margin-left: 35px;
+  margin-top: 17px;
+  margin-bottom: 20px;
+}
+
+.Habilidades-text {
+  margin-left: 30px;
+  margin-top: 17px;
+  margin-bottom: 20px;
+}
+
+.Projetos-text {
+  margin-left: 30px;
+  margin-top: 17px;
+  margin-bottom: 20px;
+}
+
+.Sobre-mim {
+  margin-left: 30px;
+  margin-top: 17px;
+  margin-bottom: 20px;
+}
+
+.Me-contrate {
+  background: rgb(0, 147, 233);
+  background: linear-gradient(
+    40deg,
+    rgba(0, 147, 233, 1) 0%,
+    rgba(128, 208, 199, 1) 100%
+  );
+
+  border-radius: 16px;
+  width: 248px;
+  height: 56px;
+  margin-top: 7px;
+  margin-right: 35px;
+  margin-left: 8px;
+  text-align: center;
+  padding-top: 9px;
+}
+
+.dark-light-theme {
+  display: flex;
+  background-color: #f0f3f5;
+  padding: 11px 33px;
+  border-radius: 16px;
+  width: 116px;
+  height: 72px;
+  position: relative;
+  margin-right: 163px;
+  margin-top: 62px;
+  margin-left: 12px;
+  cursor: pointer;
+}
+
+.dark-light-theme img {
+  width: 50px;
+  height: 50px;
+}
+
+/* -------- TITULO HOMEPAGE -------- */
+
+.titulo {
+  font-family: "Ubuntu", sans-serif;
+  color: #f0f3f5;
+}
+
+.titulo h3 {
+  font-size: 36px;
+  width: 450px;
+  height: 36px;
+  display: flex;
+  padding-top: 371px;
+  margin-left: 726px;
+  margin-bottom: 60px;
+  font-weight: 400;
+}
+.titulo h1 {
+  font-size: 72px;
+  margin-left: 325px;
+  width: 1270px;
+  height: 144px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.CTA {
+  position: relative;
+  background: rgb(0, 147, 233);
+  background: linear-gradient(
+    40deg,
+    rgba(0, 147, 233, 1) 0%,
+    rgba(128, 208, 199, 1) 100%
+  );
+
+  z-index: 1000;
+  border-radius: 16px;
+  width: 282px;
+  height: 56px;
+  padding: 11px 42px;
+  text-decoration: none;
+  color: #222324;
+  font-size: 24px;
+  left: 814px;
+  text-align: center;
+  font-family: "Mukta", sans-serif;
+  box-shadow: #222324;
+  top: 100px;
+}
+
+.CTA:hover {
+  display: block;
+  transition: 0.4s ease;
+  transform: scale(1.2);
+  -webkit-box-shadow: 0px 0px 14px 5px rgba(0, 147, 233, 0.65);
+  box-shadow: 0px 0px 14px 5px rgba(0, 147, 233, 0.65);
+}
+
+.linha-esquerda {
+  position: relative;
+  border: 1px solid #f0f3f5;
+  transform: rotate(-180deg);
+  width: 490px;
+  height: 0px;
+  left: 80px;
+  top: 271px;
+}
+
+.linha-direita {
+  position: absolute;
+  width: 490px;
+  height: 0px;
+  left: 1305px;
+  top: 699px;
+
+  border: 1px solid #f0f3f5;
+  transform: rotate(-180deg);
+}
+
+.linha-direita {
+  animation-delay: 10s;
+  animation: position-direita 4s linear infinite;
+}
+
+@keyframes position-direita {
+  0% {
+    translate: 5000px;
+    opacity: 1.5;
+  }
+
+  50% {
+    translate: -400px;
+    opacity: 0.8;
+  }
+
+  75% {
+    translate: -1000px;
+    opacity: 0.7;
+  }
+
+  100% {
+    translate: -1920px;
+    opacity: 0;
+  }
+}
+
+.linha-esquerda {
+  animation: position-esquerda 4s linear infinite;
+}
+
+@keyframes position-esquerda {
+  0% {
+    translate: -5000px;
+    opacity: 1.5;
+  }
+
+  50% {
+    translate: 400px;
+    opacity: 0.8;
+  }
+
+  75% {
+    translate: 1000px;
+    opacity: 0.7;
+  }
+
+  100% {
+    translate: 1920px;
+    opacity: 0;
+  }
+}
+
+.scroll {
+  position: absolute;
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: 94px;
+  height: 26px;
+  left: 325px;
+  top: 720px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.linha-scroll {
+  position: relative;
+  border: 2px solid #f0f3f5;
+  transform: rotate(90deg);
+  position: absolute;
+  width: 490px;
+  height: 0px;
+  margin-left: 125px;
+  top: 1020px;
+}
+
+/* -------- 2 PAGINA -------- */
+
+#habilidades h2 {
+  font-size: 72px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  color: #f0f3f5;
+  margin-top: 155px;
+}
+
+/* -------- LINHA 1 HABILIDADES -------- */
+
+.linha-1 {
+  display: flex;
+}
+
+/* -------- HTML -------- */
+.html {
+  display: flex;
+  margin-left: 241px;
+  margin-top: 146px;
+}
+
+.html h4 {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 24px;
+  color: #f0f3f5;
+  margin-left: 50px;
+}
+
+.html p {
+  font-family: "Mukta", sans-serif;
+  font-size: 16px;
+  color: #f0f3f5;
+  margin-top: 24px;
+  margin-left: 50px;
+  width: 295px;
+}
+
+.html-icon {
+  animation: position 4s infinite;
+  width: 113px;
+  height: 74.28px;
+}
+
+@keyframes position {
+  0% {
+    translate: 0px 0px;
+  }
+
+  50% {
+    translate: 0px 10px;
+  }
+
+  100% {
+    translate: 0px 0px;
+  }
+}
+
+.html-bar {
+  width: 72px;
+  height: 6px;
+  margin-left: 20px;
+}
+
+.html-icon-complete {
+  width: 113px;
+  height: 74.28px;
+}
+
+/* -------- SASS -------- */
+.sass {
+  display: flex;
+  margin-left: 32px;
+  margin-top: 146px;
+}
+
+.sass h4 {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 24px;
+  color: #f0f3f5;
+  margin-left: 50px;
+}
+
+.sass p {
+  font-family: "Mukta", sans-serif;
+  font-size: 16px;
+  color: #f0f3f5;
+  margin-top: 24px;
+  width: 295px;
+  margin-left: 50px;
+}
+
+.sass-icon {
+  animation: position 4s infinite;
+  width: 113px;
+  height: 74.28px;
+}
+
+.sass-bar {
+  width: 72px;
+  height: 6px;
+  margin-left: 20px;
+}
+
+.sass-icon-complete {
+  width: 113px;
+  height: 74.28px;
+}
+
+/* -------- NODE -------- */
+.node {
+  display: flex;
+  margin-left: 32px;
+  margin-top: 146px;
+}
+
+.node h4 {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 24px;
+  color: #f0f3f5;
+  margin-left: 50px;
+}
+
+.node p {
+  font-family: "Mukta", sans-serif;
+  font-size: 16px;
+  color: #f0f3f5;
+  margin-top: 24px;
+  width: 295px;
+  margin-left: 50px;
+}
+
+.node-icon {
+  animation: position 4s infinite;
+  width: 113px;
+  height: 74.28px;
+}
+
+.node-bar {
+  width: 72px;
+  height: 6px;
+  margin-left: 20px;
+}
+
+.node-icon-complete {
+  width: 113px;
+  height: 74.28px;
+}
+
+/* -------- LINHA 2 HABILIDADES -------- */
+
+.linha-2 {
+  display: flex;
+}
+
+/* -------- JAVASCRIPT -------- */
+
+.javascript {
+  display: flex;
+  margin-top: 105px;
+  margin-left: 241px;
+}
+
+.javascript h4 {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 24px;
+  color: #f0f3f5;
+  margin-left: 50px;
+}
+
+.javascript p {
+  font-family: "Mukta", sans-serif;
+  font-size: 16px;
+  color: #f0f3f5;
+  margin-top: 24px;
+  margin-left: 50px;
+  width: 295px;
+}
+
+.javascript-icon {
+  animation: position 4s infinite;
+  width: 113px;
+  height: 74.28px;
+}
+
+.javascript-bar {
+  width: 72px;
+  height: 6px;
+  margin-left: 20px;
+}
+
+.javascript-icon-complete {
+  width: 113px;
+  height: 74.28px;
+}
+
+/* -------- REACT -------- */
+
+.react {
+  display: flex;
+  margin-left: 32px;
+  margin-top: 105px;
+}
+
+.react h4 {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 24px;
+  color: #f0f3f5;
+  margin-left: 50px;
+}
+
+.react p {
+  font-family: "Mukta", sans-serif;
+  font-size: 16px;
+  color: #f0f3f5;
+  margin-top: 24px;
+  width: 295px;
+  margin-left: 50px;
+}
+
+.react-icon {
+  animation: position 4s infinite;
+  width: 113px;
+  height: 74.28px;
+}
+
+.react-bar {
+  width: 72px;
+  height: 6px;
+  margin-left: 20px;
+}
+
+.react-icon-complete {
+  width: 113px;
+  height: 74.28px;
+}
+
+/* -------- FLUTTER -------- */
+
+.flutter {
+  display: flex;
+  margin-left: 35px;
+  margin-top: 105px;
+}
+
+.flutter h4 {
+  font-family: "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 24px;
+  color: #f0f3f5;
+  margin-left: 50px;
+}
+
+.flutter p {
+  font-family: "Mukta", sans-serif;
+  font-size: 16px;
+  color: #f0f3f5;
+  margin-top: 24px;
+  width: 295px;
+  margin-left: 50px;
+}
+
+.flutter-icon {
+  animation: position 4s infinite;
+  width: 113px;
+  height: 74.28px;
+}
+
+.flutter-bar {
+  width: 72px;
+  height: 6px;
+  margin-left: 20px;
+}
+
+.flutter-icon-complete {
+  width: 113px;
+  height: 74.28px;
+}
+
+/* -------- 3 DOBRA -------- */
+
+#projetos h2 {
+  font-size: 72px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  color: #f0f3f5;
+  margin-top: 300px;
+}
+
+.onda1 {
+  position: absolute;
+  width: 1920px;
+  height: 555.73px;
+  top: 2447.73px;
+  object-fit: cover;
+}
+
+.onda2 {
+  position: absolute;
+  width: 1920px;
+  height: 355.73px;
+  left: 3px;
+  top: 2417px;
+  object-fit: cover;
+}
+
+.onda3 {
+  position: absolute;
+  width: 1920px;
+  height: 355.73px;
+  top: 2388px;
+  object-fit: cover;
+}
+
+.onda4 {
+  position: absolute;
+  width: 1920px;
+  height: 355.73px;
+  left: 0px;
+  top: 2249px;
+  object-fit: cover;
+}
+
+.onda5 {
+  position: absolute;
+  width: 1920px;
+  height: 355.73px;
+  left: 0px;
+  top: 2488px;
+  object-fit: fill;
+}
+
+.iphone {
+  position: absolute;
+  width: 564.03px;
+  height: 595.79px;
+  margin-left: 1002px;
+  margin-top: 170px;
+}
+
+.macbook {
+  position: absolute;
+  width: 1268.16px;
+  height: 678.62px;
+  margin-left: 325px;
+  margin-top: 88px;
+}
+
+.projetos-links {
+  display: flex;
+  align-items: center;
+  margin-top: 826px;
+  margin-left: 359px;
+}
+
+.nubank {
+  font-family: "Mukta", sans-serif;
+  text-decoration: none;
+  color: #f0f3f5;
+  font-size: 24px;
+}
+
+.blog {
+  font-family: "Mukta", sans-serif;
+  text-decoration: none;
+  color: #f0f3f5;
+  padding-left: 130px;
+  font-size: 24px;
+}
+
+.spider-man {
+  font-family: "Mukta", sans-serif;
+  text-decoration: none;
+  color: #f0f3f5;
+  padding-left: 166px;
+  font-size: 24px;
+}
+
+.button-mais-projetos-complete {
+  display: flex;
+  background: rgb(0, 147, 233);
+  background: linear-gradient(
+    40deg,
+    rgba(0, 147, 233, 1) 0%,
+    rgba(128, 208, 199, 1) 100%
+  );
+  margin-left: 133px;
+  border-radius: 16px;
+  width: 384px;
+  height: 56px;
+}
+.button-mais-projetos-complete a {
+  font-family: "Mukta", sans-serif;
+  color: #222324;
+
+  font-size: 24px;
+  padding: 9px 119px 12px 58px;
+  text-decoration: none;
+  width: 384px;
+  height: 56px;
+  display: block;
+  transition: 0.4s ease;
+}
+
+.arrow-button {
+  width: 38.42px;
+  height: 39.93px;
+  margin: 8px 30px 8px 0px;
+}
+
+.quadrado-maior {
+  display: flex;
+  background: linear-gradient(45deg, #0093e9 0%, #80d0c7 100%);
+  border-radius: 16px;
+  width: 1334px;
+  height: 717px;
+  margin-top: 272px;
+  margin-left: 293px;
+}
+
+.eu {
+  width: 500px;
+  height: 646px;
+  margin-left: 52px;
+  margin-top: 71px;
+}
+
+.quadrado-menor {
+  width: 664px;
+  height: 503px;
+  background-color: #404040;
+  border-radius: 16px;
+  margin-top: 122px;
+  margin-left: 46px;
+}
+
+.quadrado-menor h2 {
+  font-family: "Ubuntu", sans-serif;
+  color: #f0f3f5;
+  font-size: 32px;
+  margin: 52px 76px 30px 68px;
+}
+
+.quadrado-menor p {
+  font-family: "Mukta", sans-serif;
+  font-size: 24px;
+  color: #f0f3f5;
+  margin: 0px 76px 42px 68px;
+}
+
+.quadrado-menor a {
+  font-family: "Mukta", sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  color: #222324;
+  background: linear-gradient(84.84deg, #0093e9 4.14%, #80d0c7 95.86%);
+  border-radius: 16px;
+  padding: 11px 58px;
+  margin: 0px 303px 0px 68px;
+}
+
+.foto-perfil-footer {
+  border-radius: 50%;
+  width: 99px;
+  height: 99px;
+  object-fit: cover;
+  object-position: 0 -35px;
+  margin-left: 326px;
+  margin-top: 342px;
+}
+
+.text-left {
+  display: flex;
+}
+
+.text-left h3 {
+  font-family: "Mukta", sans-serif;
+  font-size: 36px;
+  color: #f0f3f5;
+  margin-left: 31px;
+  margin-top: 363px;
+  font-weight: 400;
+}
+
+footer p {
+  font-family: "Mukta", sans-serif;
+  font-size: 24px;
+  color: #f0f3f5;
+  margin-left: 325px;
+  margin-top: 41px;
+}
+
+.text-left h4 {
+  font-family: "Mukta", sans-serif;
+  font-size: 36px;
+  color: #f0f3f5;
+  margin-left: 581px;
+  margin-top: 363px;
+  font-weight: 400;
+}
+
+.texts-footer {
+  display: flex;
+}
+
+.links-footer {
+  margin-top: 41px;
+}
+
+.links-footer a {
+  display: block;
+  text-decoration: none;
+  font-family: "Mukta", sans-serif;
+  font-size: 24px;
+  color: #f0f3f5;
+  margin-bottom: 24px;
+  margin-left: 461px;
+}
+
+.redes-sociais {
+  display: flex;
+  margin-left: 334px;
+  margin-bottom: 159px;
+  margin-top: 51px;
+}
+
+.link-linkedin {
+  background-image: url(/assets/svgs/redes-sociais/linkedin.svg);
+
+  width: 54px;
+  height: 54px;
+  cursor: pointer;
+}
+
+.link-twitter {
+  background-image: url(/assets/svgs/redes-sociais/twitter.svg);
+
+  margin-left: 50px;
+  width: 54px;
+  height: 54px;
+  cursor: pointer;
+}
+
+.link-instagram {
+  cursor: pointer;
+  background-image: url(/assets/svgs/redes-sociais/instagram.svg);
+
+  margin-left: 50px;
+  width: 54px;
+  height: 54px;
+}
+
+.link-github {
+  cursor: pointer;
+  background-image: url(/assets/svgs/redes-sociais/github.svg);
+
+  margin-left: 50px;
+  width: 54px;
+  height: 54px;
+}
